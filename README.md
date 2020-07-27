@@ -5,7 +5,11 @@ Project to build ETL pipeline in Postgres
 
 This Postgres database was created for Sparkify (a startup) to aid the analytics team in understanding what songs users are listening to, by analysing the data they’ve been collecting on songs and user activity on their new music streaming app. The Analytics team don’t have an easy way to query these data which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
+## How To Create tables
+
 The Postgres database was created with tables designed to optimize queries on song play analysis. To create the database, a fact table (songplays) and four-dimension tables (songs, artists, time and users) were defined for a star schema for particular analytics focus. And an ETL pipeline written that to transfer data from files in two local directories into these tables in Postgres using Python and SQL.  
+
+## Justification for creating Fact and Dimensions tables
 
 The decision to normalize the database by defining facts and dimension tables for a star schema was to reduce redundancy and increase the data integrity. Also, the normalization of the database will make the data more intuitive and easy to understand by the users thus they will be able to make simplified queries to retrieve the data insight they are looking for which solves the problem the analytics team in Sparkify are facing. 
 
